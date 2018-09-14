@@ -1,0 +1,15 @@
+{
+    "name": "vanio-ts-components",
+    "version": "0.1.1",
+    "description": "Simple TypeScript component system",
+    "engines": {
+        "node": ">=6"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/vaniocz/ts-components.git"
+    },
+    "keywords": ["TypeScript", "components"],
+    "author": "Marek Štípek <mario.dweller@seznam.cz>",
+    "license": "MIT"
+}
