@@ -90,7 +90,7 @@ export function register(root: HTMLElement|string): void
                 return;
             }
 
-            registerComponent(element, name, resolveData(attribute.name.substr(5)));
+            registerComponent(element, name, resolveData(attribute.value));
         });
     }
 }
