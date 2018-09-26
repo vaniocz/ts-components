@@ -13,7 +13,7 @@ declare global
 
 interface ComponentConstructor
 {
-    new (element: HTMLElement|string, options: any): any;
+    new (element: HTMLElement|any, options: any): any;
 }
 
 function convertToCamelCase(text: string): string
@@ -62,14 +62,8 @@ export function component(name: string)
     }
 }
 
-export function select(element: Element|string): Element
+export function register(root: HTMLElement): void
 {
-    return typeof element === 'string' ? document.querySelector(element) || new Element : element;
-}
-
-export function register(root: HTMLElement|string): void
-{
-    root = select(root) as HTMLElement;
     const elements = root.getElementsByTagName('*');
 
     for (let i = -1; i < elements.length; i++) {

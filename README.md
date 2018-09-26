@@ -8,7 +8,7 @@ Simple TypeScript component system.
 
 ```ts
 // Hello.ts
-import {component, select} from 'vanio-ts-components';
+import {component} from 'vanio-ts-components';
 
 interface HelloOptions
 {
@@ -20,10 +20,10 @@ export default class Hello
 {
     private element: HTMLElement;
 
-    public constructor(element: HTMLElement|string, options: HelloOptions = {})
+    public constructor(element: HTMLElement, options: HelloOptions = {})
     {
-        this.element = select(element);
-        this.$element.innerText = options.text || 'Hello';
+        this.element = element;
+        this.element.innerText = options.text || 'Hello';
     }
 }
 ```
